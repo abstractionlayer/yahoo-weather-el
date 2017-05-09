@@ -135,7 +135,7 @@ See `yahoo-weather-retrieve-data' for the usage of EXPIRE-TIME."
 (defvar yahoo-weather-months-map
   '(( 1 . "Jan") ( 2 . "Feb") ( 3 . "Mar") ( 4 . "Apr")
     ( 5 . "May") ( 6 . "Jun") ( 7 . "Jul") ( 8 . "Aug")
-    (09 . "Sep") (10 . "Oct") (11 . "Nov") (12 . "Dec"))
+    ( 9 . "Sep") (10 . "Oct") (11 . "Nov") (12 . "Dec"))
   "The map of numbers and correspond months names.")
 
 (defun yahoo-weather-get-month-short-by-number (month-number)
