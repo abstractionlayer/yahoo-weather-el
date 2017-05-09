@@ -1,4 +1,4 @@
-;;; yandex-weather-tests-common.el
+;;; yahoo-weather-tests-common.el
 
 ;; Copyright (c) 2017 Whitesquall
 

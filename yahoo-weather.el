@@ -110,7 +110,7 @@ renewal."
 
 (defun yahoo-weather-get-data (location &optional expire-time)
   "Get weather data for LOCATION.
-See `yandex-weather-retrieve-data' for the usage of EXPIRE-TIME."
+See `yahoo-weather-retrieve-data' for the usage of EXPIRE-TIME."
   (yahoo-weather-retrieve-data
    (yahoo-weather-build-forecast-url location) expire-time))
 
@@ -179,4 +179,4 @@ day and year."
 (provide 'yahoo-weather)
 
 
-;;; yandex-weather.el ends here
+;;; yahoo-weather.el ends here
