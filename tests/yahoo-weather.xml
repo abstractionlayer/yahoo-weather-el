@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng" yahoo:count="1" yahoo:created="2017-05-08T20:20:06Z" yahoo:lang="en-US">
+  <results>
+    <channel>
+      <yweather:units xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" distance="km" pressure="mb" speed="km/h" temperature="C"/>
+      <title>Yahoo! Weather - Moscow, Moscow Federal City, RU</title>
+      <link>http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2122265/</link>
+      <description>Yahoo! Weather for Moscow, Moscow Federal City, RU</description>
+      <language>en-us</language>
+      <lastBuildDate>Mon, 08 May 2017 11:20 PM MSK</lastBuildDate>
+      <ttl>60</ttl>
+      <yweather:location xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" city="Moscow" country="Russia" region=" Moscow Federal City"/>
+      <yweather:wind xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" chill="28" direction="40" speed="28.97"/>
+      <yweather:atmosphere xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" humidity="91" pressure="33186.62" rising="0" visibility="23.50"/>
+      <yweather:astronomy xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" sunrise="4:30 am" sunset="8:23 pm"/>
+      <image>
+        <title>Yahoo! Weather</title>
+        <width>142</width>
+        <height>18</height>
+        <link>http://weather.yahoo.com</link>
+        <url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+      </image>
+      <item>
+        <title>Conditions for Moscow, Moscow Federal City, RU at 10:00 PM MSK</title>
+        <geo:lat xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">55.741638</geo:lat>
+        <geo:long xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">37.605061</geo:long>
+        <link>http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2122265/</link>
+        <pubDate>Mon, 08 May 2017 10:00 PM MSK</pubDate>
+        <yweather:condition xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="5" date="Mon, 08 May 2017 10:00 PM MSK" temp="2" text="Rain And Snow"/>
+        <yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="5" date="08 May 2017" day="Mon" high="8" low="3" text="Rain And Snow"/>
+        <yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="5" date="09 May 2017" day="Tue" high="6" low="0" text="Rain And Snow"/>
+        <yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="12" date="10 May 2017" day="Wed" high="7" low="0" text="Rain"/>
+        <yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="30" date="11 May 2017" day="Thu" high="9" low="-1" text="Partly Cloudy"/>
+        <yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="12" date="12 May 2017" day="Fri" high="10" low="2" text="Rain"/>
+        <yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="30" date="13 May 2017" day="Sat" high="9" low="0" text="Partly Cloudy"/>
+        <yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="30" date="14 May 2017" day="Sun" high="11" low="0" text="Partly Cloudy"/>
+        <yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="30" date="15 May 2017" day="Mon" high="13" low="3" text="Partly Cloudy"/>
+        <yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="39" date="16 May 2017" day="Tue" high="10" low="2" text="Scattered Showers"/>
+        <yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="28" date="17 May 2017" day="Wed" high="12" low="2" text="Mostly Cloudy"/>
+        <description>&lt;![CDATA[&lt;img src="http://l.yimg.com/a/i/us/we/52/5.gif"/&gt;
+        &lt;BR /&gt;
+        &lt;b&gt;Current Conditions:&lt;/b&gt;
+        &lt;BR /&gt;Rain And Snow
+        &lt;BR /&gt;
+        &lt;BR /&gt;
+        &lt;b&gt;Forecast:&lt;/b&gt;
+        &lt;BR /&gt; Mon - Rain And Snow. High: 8Low: 3
+        &lt;BR /&gt; Tue - Rain And Snow. High: 6Low: 0
+        &lt;BR /&gt; Wed - Rain. High: 7Low: 0
+        &lt;BR /&gt; Thu - Partly Cloudy. High: 9Low: -1
+        &lt;BR /&gt; Fri - Rain. High: 10Low: 2
+        &lt;BR /&gt;
+        &lt;BR /&gt;
+        &lt;a href="http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2122265/"&gt;Full Forecast at Yahoo! Weather&lt;/a&gt;
+        &lt;BR /&gt;
+        &lt;BR /&gt;
+        (provided by &lt;a href="http://www.weather.com" &gt;The Weather Channel&lt;/a&gt;)
+        &lt;BR /&gt;
+        ]]&gt;</description>
+        <guid isPermaLink="false"/>
+      </item>
+    </channel>
+  </results>
+</query>
+<!-- total: 1234 -->
+<!-- prod_bf1_1;paas.yql;queryyahooapiscomproductionbf1;6d3cd9e1-2c5b-11e7-b972-d4ae52974741 -->

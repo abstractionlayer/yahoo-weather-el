@@ -15,6 +15,7 @@ all: compile
 
 test:
 	$(BATCH) -L tests -l tests/yahoo-weather-tests.el \
+		-l tests/yahoo-weather-tests-common.el \
 		-f ert-run-tests-batch-and-exit
 
 compile: $(ELC)
