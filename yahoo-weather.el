@@ -83,7 +83,7 @@ it is not older than EXPIRE-TIME secnds. Otherwise, it will be fetched
 and then cached. Therefore, setting EXPIRE-TIME to 0 will force a cache
 renewal."
   (with-current-buffer (yahoo-weather-retrieve-data-raw
-                        url expire-time)
+                        (url-encode-url url) expire-time)
     (goto-char (point-min))
     (unless (search-forward "\n\n" nil t)
       (error "Data not found."))
