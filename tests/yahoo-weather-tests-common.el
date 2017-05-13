@@ -43,13 +43,16 @@
       yahoo-weather-test-data-file
     (concat "tests/" yahoo-weather-test-data-file)))
 
-(defun yahoo-weather-open-xml-file-suppress-msg-what-schema-is-used ()
-  "Open file with test data without printing message what schema is used.
-Running tests looks more cleaner."
-  (cl-letf (((symbol-function 'rng-what-schema)
-             (lambda ()
-               (interactive))))
-    (find-file (yahoo-weather-find-file-with-test-data))))
+(defun yahoo-weather-emulate-server-response ()
+  (let ((buffer-name (generate-new-buffer-name " *temp*")))
+    ;; We can skip a header of http response. But we need to fill
+    ;; a header-body delimiter which used as pattern for searching response
+    ;; body. But after this manipulation the content of buffer stays to be
+    ;; a valid xml. Killing of two rabbits with one shot!
+    (with-current-buffer (generate-new-buffer buffer-name)
+      (insert "\n\n")
+      (insert-file-contents (yahoo-weather-find-file-with-test-data)))
+    buffer-name))
 
 (defun yahoo-weather-get-data-fixture (body date format data)
   (unwind-protect
@@ -65,10 +68,24 @@ Running tests looks more cleaner."
                        t)))
             (funcall body))))))
 
+(defun yahoo-weather-url-retrieve-synchronously-mock (body arg-captor)
+  "Mock for `url-retrieve-synchronously' because we need to check argument for
+requirements.
+BODY is a lambda with statements which emulates original
+`url-retrieve-synchronously'.
+ARG-CAPTOR is a lambda which capture url passing to mocked function."
+  (cl-letf
+      (((symbol-function 'url-retrieve-synchronously)
+        (lambda (url)
+          (interactive)
+          (funcall arg-captor url)
+          (yahoo-weather-emulate-server-response))))
+    (funcall body)))
+
 (defun yahoo-weather-get-test-data ()
   "Return stubbed test data in xml format."
   (with-current-buffer
-      (yahoo-weather-open-xml-file-suppress-msg-what-schema-is-used)
+      (yahoo-weather-emulate-server-response)
     (let ((data (xml-parse-region)))
       (kill-buffer (current-buffer))
       data)))

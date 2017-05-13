@@ -142,5 +142,19 @@
      data)
     ))
 
+(ert-deftest yahoo-weather-check-that-url-was-encoded-test ()
+  "Regression. Test that url of API was encoded before requesting.
+Otherwise url caching won't work properly."
+  :tags '(yahoo-weather)
+  (let* ((original-url (yahoo-weather-build-forecast-url "moscow, ru"))
+         (captured-url nil)
+         (body (lambda () (yahoo-weather-retrieve-data original-url)))
+         (arg-captor (lambda (url) (setq captured-url url))))
+    (yahoo-weather-url-retrieve-synchronously-mock body arg-captor)
+    (should
+     (string-equal
+      (url-encode-url original-url)
+      captured-url))))
+
 
 ;;; yahoo-weather-tests.el ends here
