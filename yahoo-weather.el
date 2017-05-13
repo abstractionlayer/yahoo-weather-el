@@ -153,7 +153,7 @@ day and year."
 (defun yahoo-weather-data->forecast-by-date (data date)
   "Return the forecast of DATA by the DATE."
   (let* ((forecast-date (yahoo-weather-prepare-date date))
-         (get-date (lambda (x) (cdr (assq 'date (car (cdr x))))))
+         (get-date (lambda (x) (xml-get-attribute x 'date)))
          (filter (lambda (x) (string-equal forecast-date
                                            (funcall get-date x))))
          (forecasts (yahoo-weather-data->forecasts data)))
