@@ -27,6 +27,7 @@
 
 
 (require 'cl-lib)
+(require 'calendar)
 (require 'yahoo-weather)
 (require 'image)
 (require 'format-spec)

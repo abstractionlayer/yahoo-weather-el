@@ -20,7 +20,6 @@
 ;; 02110-1301, USA.
 
 
-(require 'cl)
 (require 'cl-lib)
 (require 'url)
 (require 'url-cache)
@@ -157,7 +156,7 @@ day and year."
          (filter (lambda (x) (string-equal forecast-date
                                            (funcall get-date x))))
          (forecasts (yahoo-weather-data->forecasts data)))
-    (car (remove-if-not filter forecasts))))
+    (car (cl-remove-if-not filter forecasts))))
 
 (defun yahoo-weather-forecast->low-temperature (forecast)
   "Return the low temperature for the FORECAST."
