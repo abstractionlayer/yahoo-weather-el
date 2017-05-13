@@ -79,7 +79,7 @@ Else return nil."
      (< days-of-date high-days))))
 
 (defun org-yahoo-weather-build-org-ret-string (data forecast)
-  "Build and return forecast stirng for the agenda."
+  "Build and return forecast string for the agenda."
   (let ((condition (yahoo-weather-forecast->condition forecast))
         (low (yahoo-weather-forecast->low-temperature forecast))
         (high (yahoo-weather-forecast->high-temperature forecast))
