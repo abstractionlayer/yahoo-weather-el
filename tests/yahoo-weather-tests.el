@@ -156,5 +156,29 @@ Otherwise url caching won't work properly."
       (url-encode-url original-url)
       captured-url))))
 
+(ert-deftest yahoo-weather-check-interval-test ()
+  "Test the `org-yahoo-weather-check-interval' function."
+  :tags '(yahoo-weather)
+  (yahoo-weather-current-time-stub
+   (lambda ()
+     (should
+      ;; "2017-05-20"
+      (org-yahoo-weather-check-interval '(5 20 2017)))
+
+     (should
+      ;; "2017-05-29"
+      (org-yahoo-weather-check-interval '(5 29 2017)))
+
+     (should
+      ;; "2017-05-30"
+      (not (org-yahoo-weather-check-interval '(5 30 2017))))
+
+     (should
+      ;; "2017-05-19"
+      (not (org-yahoo-weather-check-interval '(5 19 2017))))
+     )
+   ;; "2017-05-20 19:04:41"
+   '(22816 26906 509599 313000)))
+
 
 ;;; yahoo-weather-tests.el ends here

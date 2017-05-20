@@ -68,6 +68,15 @@
                        t)))
             (funcall body))))))
 
+(defun yahoo-weather-current-time-stub (body current-time)
+  "The stub which replaces a call of `current-time' with CURRENT-TIME value
+and evaluates BODY lambda with stubbed function."
+  (cl-letf
+      (((symbol-function 'current-time)
+        (lambda ()
+          current-time)))
+    (funcall body)))
+
 (defun yahoo-weather-url-retrieve-synchronously-mock (body arg-captor)
   "Mock for `url-retrieve-synchronously' because we need to check argument for
 requirements.
