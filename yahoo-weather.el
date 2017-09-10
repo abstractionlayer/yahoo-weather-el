@@ -1,6 +1,9 @@
 ;;; yahoo-weather.el --- Fetch Yahoo Weather forecasts.
 
-;; Copyright (c) 2016 Whitesquall
+;; Copyright (c) 2016-2017 Whitesquall
+;; Author: Whitesquall
+;; Version: 0.0.3
+;; Keywords: yahoo weather org-mode agenda forecast
 
 ;; This file is NOT part of GNU Emacs.
 
