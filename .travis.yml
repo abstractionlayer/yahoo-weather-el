@@ -17,5 +17,6 @@ before_install:
 script:
   - evm install $EVM_EMACS --use --skip
   - emacs --version
+  - cask install
   - make
   - make test
