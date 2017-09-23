@@ -14,8 +14,9 @@ EXTRA_DIST = README.md LICENSE
 all: compile
 
 test:
-	$(BATCH) -L tests -l tests/yahoo-weather-tests.el \
-		-l tests/yahoo-weather-tests-common.el \
+	$(BATCH) \
+		-L tests \
+		-l tests/yahoo-weather-tests.el \
 		-f ert-run-tests-batch-and-exit
 
 compile: $(ELC)
